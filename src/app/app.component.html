@@ -54,10 +54,16 @@
     Adicionar
   </button>
 
-  <ul>
-    <li *ngFor="let book of books">
-      Titulo: {{ book.title }}; author: {{ book.author }}; lingua:
-      {{ book.language }}
-    </li>
-  </ul>
+  <table>
+    <tr>
+      <th>Titulo</th>
+      <th>Author</th>
+      <th>Lingua</th>
+    </tr>
+    <tr *ngFor="let book of books">
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.language }}</td>
+    </tr>
+  </table>
 </div>
