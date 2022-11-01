@@ -1,5 +1,7 @@
 # FavoriteBooksWebsite
 
+Following Mozilla's [Getting Started](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started) guide to create my first [website](https://rkoyanagui.github.io/favorite-books-website/).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
 ## Development server
