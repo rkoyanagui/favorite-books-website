@@ -37,6 +37,16 @@ export class AppComponent {
     if (this.languageFilter === 'all') {
       return this.allBooks;
     }
-    return this.allBooks.filter((book) => book.language === this.languageFilter);
+    return this.allBooks.filter(
+      (book) => book.language === this.languageFilter
+    );
+  }
+
+  addBook(title: string, author: string, language: string) {
+    this.allBooks.unshift({
+      title,
+      author,
+      language,
+    });
   }
 }

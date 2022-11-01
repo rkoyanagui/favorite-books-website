@@ -1,7 +1,63 @@
 <div class="main">
   <h1>Minha lista de livros favoritos</h1>
 
+  <label for="addBookInput">Qual outro livro quer adicionar?</label>
+
+  <input
+    #newTitle
+    placeholder="Titulo"
+    (keyup.enter)="
+      addBook(newTitle.value, newAuthor.value, newLanguage.value);
+      newTitle.value = '';
+      newAuthor.value = '';
+      newLanguage.value = '';
+    "
+    class="lg-text-input"
+    id="addTitleInput"
+  />
+
+  <input
+    #newAuthor
+    placeholder="Author"
+    (keyup.enter)="
+      addBook(newTitle.value, newAuthor.value, newLanguage.value);
+      newTitle.value = '';
+      newAuthor.value = '';
+      newLanguage.value = '';
+    "
+    class="lg-text-input"
+    id="addAuthorInput"
+  />
+
+  <input
+    #newLanguage
+    placeholder="Lingua"
+    (keyup.enter)="
+      addBook(newTitle.value, newAuthor.value, newLanguage.value);
+      newTitle.value = '';
+      newAuthor.value = '';
+      newLanguage.value = '';
+    "
+    class="lg-text-input"
+    id="addLanguageInput"
+  />
+
+  <button
+    class="btn-primary"
+    (click)="
+      addBook(newTitle.value, newAuthor.value, newLanguage.value);
+      newTitle.value = '';
+      newAuthor.value = '';
+      newLanguage.value = '';
+    "
+  >
+    Adicionar
+  </button>
+
   <ul>
-    <li *ngFor="let book of books">{{ book.title }}</li>
+    <li *ngFor="let book of books">
+      Titulo: {{ book.title }}; author: {{ book.author }}; lingua:
+      {{ book.language }}
+    </li>
   </ul>
 </div>
