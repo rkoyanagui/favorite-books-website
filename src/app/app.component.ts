@@ -28,9 +28,9 @@ export class AppComponent {
       language: 'fr',
     },
     {
-      title: 'Star Maker',
-      author: 'Stapledon, Olaf',
-      language: 'en',
+      title: 'Memorias posthumas de Brás Cubas',
+      author: 'de Assis, Machado',
+      language: 'pt',
     },
   ];
 

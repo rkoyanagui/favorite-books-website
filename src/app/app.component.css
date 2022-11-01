@@ -38,7 +38,9 @@ label {
 }
 
 .active {
-  color: green;
+  background-color: #a6ffbb;
+  color: #344d3b;
+  font-weight: bold;
 }
 
 ul {

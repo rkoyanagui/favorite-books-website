@@ -54,6 +54,41 @@
     Adicionar
   </button>
 
+  <!-- Filter -->
+  <div class="btn-wrapper">
+    <button
+      class="btn btn-menu"
+      [class.active]="languageFilter == 'all'"
+      (click)="languageFilter = 'all'"
+    >
+      Todos
+    </button>
+
+    <button
+      class="btn btn-menu"
+      [class.active]="languageFilter == 'en'"
+      (click)="languageFilter = 'en'"
+    >
+      Inglez
+    </button>
+
+    <button
+      class="btn btn-menu"
+      [class.active]="languageFilter == 'fr'"
+      (click)="languageFilter = 'fr'"
+    >
+      Francez
+    </button>
+
+    <button
+      class="btn btn-menu"
+      [class.active]="languageFilter == 'pt'"
+      (click)="languageFilter = 'pt'"
+    >
+      Portuguez
+    </button>
+  </div>
+
   <h2>
     {{ books.length }}
     <span *ngIf="books.length === 1; else elseBlock">livro</span>
