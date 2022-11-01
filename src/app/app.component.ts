@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from './book';
 
 @Component({
   selector: 'app-root',
@@ -48,5 +49,9 @@ export class AppComponent {
       author,
       language,
     });
+  }
+
+  remove(book: Book) {
+    this.allBooks.splice(this.allBooks.indexOf(book), 1);
   }
 }

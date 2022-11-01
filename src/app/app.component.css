@@ -57,20 +57,22 @@ table {
 }
 
 thead th:nth-child(1) {
-  width: 50%;
+  width: 45%;
 }
 
 thead th:nth-child(2) {
-  width: 45%;
+  width: 40%;
 }
 
 thead th:nth-child(3) {
   width: 5%;
 }
 
+thead th:nth-child(4) {
+  width: 10%;
+}
+
 th,
 td {
   padding: 20px;
 }
-
-

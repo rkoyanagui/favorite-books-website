@@ -1,0 +1,51 @@
+<div class="book">
+  <div class="btn-wrapper" *ngIf="!editable">
+    <button class="btn" (click)="editable = !editable">Editar</button>
+    <button class="btn btn-warn" (click)="remove.emit()">Excluir</button>
+  </div>
+
+  <!-- This section shows only if user clicks Edit button -->
+  <div *ngIf="editable">
+    <input
+      class="sm-text-input"
+      placeholder="editar titulo"
+      [value]="book.title"
+      #editedTitle
+      (keyup.enter)="
+        saveBook(editedTitle.value, editedAuthor.value, editedLanguage.value)
+      "
+    />
+
+    <input
+      class="sm-text-input"
+      placeholder="editar author"
+      [value]="book.author"
+      #editedAuthor
+      (keyup.enter)="
+        saveBook(editedTitle.value, editedAuthor.value, editedLanguage.value)
+      "
+    />
+
+    <input
+      class="sm-text-input"
+      placeholder="editar lingua"
+      [value]="book.language"
+      #editedLanguage
+      (keyup.enter)="
+        saveBook(editedTitle.value, editedAuthor.value, editedLanguage.value)
+      "
+    />
+
+    <div class="btn-wrapper">
+      <button class="btn" (click)="editable = !editable">Cancelar</button>
+      <button
+        class="btn btn-save"
+        (click)="
+          saveBook(editedTitle.value, editedAuthor.value, editedLanguage.value)
+        "
+      >
+        Salvar
+      </button>
+    </div>
+  </div>
+</div>

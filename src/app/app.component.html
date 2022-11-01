@@ -10,7 +10,7 @@
       addBook(newTitle.value, newAuthor.value, newLanguage.value);
       newTitle.value = '';
       newAuthor.value = '';
-      newLanguage.value = '';
+      newLanguage.value = ''
     "
     class="lg-text-input"
     id="addTitleInput"
@@ -23,7 +23,7 @@
       addBook(newTitle.value, newAuthor.value, newLanguage.value);
       newTitle.value = '';
       newAuthor.value = '';
-      newLanguage.value = '';
+      newLanguage.value = ''
     "
     class="lg-text-input"
     id="addAuthorInput"
@@ -36,7 +36,7 @@
       addBook(newTitle.value, newAuthor.value, newLanguage.value);
       newTitle.value = '';
       newAuthor.value = '';
-      newLanguage.value = '';
+      newLanguage.value = ''
     "
     class="lg-text-input"
     id="addLanguageInput"
@@ -48,11 +48,17 @@
       addBook(newTitle.value, newAuthor.value, newLanguage.value);
       newTitle.value = '';
       newAuthor.value = '';
-      newLanguage.value = '';
+      newLanguage.value = ''
     "
   >
     Adicionar
   </button>
+
+  <h2>
+    {{ books.length }}
+    <span *ngIf="books.length === 1; else elseBlock">livro</span>
+    <ng-template #elseBlock>livros</ng-template>
+  </h2>
 
   <table>
     <tr>
@@ -60,10 +66,11 @@
       <th>Author</th>
       <th>Lingua</th>
     </tr>
-    <tr *ngFor="let book of books">
-      <td>{{ book.title }}</td>
-      <td>{{ book.author }}</td>
-      <td>{{ book.language }}</td>
+    <tr *ngFor="let b of books">
+      <td>{{ b.title }}</td>
+      <td>{{ b.author }}</td>
+      <td>{{ b.language }}</td>
+      <td><app-book (remove)="remove(b)" [book]="b"></app-book></td>
     </tr>
   </table>
 </div>
