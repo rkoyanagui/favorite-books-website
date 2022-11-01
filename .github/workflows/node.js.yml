@@ -35,7 +35,7 @@ jobs:
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: npm ci
       - name: Build
-        run: npm run ng build -c production
+        run: npm run ng build -c production --base-href "https://rkoyanagui.github.io/favorite-books-website/"
       - name: Conventional Changelog Action
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3.16.0
@@ -54,4 +54,4 @@ jobs:
           body: ${{ steps.changelog.outputs.clean_changelog }}
 
       - name: Deploy
-        run: npm run deploy
+        run: npm run ng deploy
