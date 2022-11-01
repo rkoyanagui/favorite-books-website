@@ -50,3 +50,8 @@ body {
 .btn-primary:active {
   background-color: #212020;
 }
+
+.observacao {
+  font-size: 0.75rem;
+  font-style: italic;
+}
