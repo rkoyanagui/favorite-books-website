@@ -1,17 +1,17 @@
-.item {
+.book {
   padding: 0.5rem 0 0.75rem 0;
   text-align: left;
   font-size: 1.2rem;
 }
 
-.btn-wrapper {
+.btn-group {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
-.btn {
-  /* menu buttons flexbox styles */
-  flex-basis: 49%;
+.btn-group button {
+  width: 100%;
+  display: block;
 }
 
 .btn-save {

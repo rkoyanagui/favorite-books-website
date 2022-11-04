@@ -1,5 +1,5 @@
 <div class="book">
-  <div class="btn-wrapper" *ngIf="!editable">
+  <div class="btn-group" *ngIf="!editable">
     <button class="btn" (click)="editable = !editable">Editar</button>
     <button class="btn btn-warn" (click)="remove.emit()">Excluir</button>
   </div>
@@ -36,7 +36,7 @@
       "
     />
 
-    <div class="btn-wrapper">
+    <div class="btn-group">
       <button class="btn" (click)="editable = !editable">Cancelar</button>
       <button
         class="btn btn-save"

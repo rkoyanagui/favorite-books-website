@@ -34,7 +34,7 @@ label {
 }
 
 .btn-menu {
-  flex-basis: 32%;
+  flex: 1 1 25%;
 }
 
 .active {
@@ -59,19 +59,19 @@ table {
 }
 
 thead th:nth-child(1) {
-  width: 45%;
+  width: 35%;
 }
 
 thead th:nth-child(2) {
-  width: 40%;
+  width: 30%;
 }
 
 thead th:nth-child(3) {
-  width: 5%;
+  width: 10%;
 }
 
 thead th:nth-child(4) {
-  width: 10%;
+  width: 25%;
 }
 
 th,

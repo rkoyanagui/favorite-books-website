@@ -96,24 +96,30 @@
   </h2>
 
   <table>
-    <tr>
-      <th>Titulo</th>
-      <th>Author</th>
-      <th>Lingua</th>
-    </tr>
-    <tr *ngFor="let b of books">
-      <td>{{ b.title }}</td>
-      <td>{{ b.author }}</td>
-      <td>{{ b.language }}</td>
-      <td><app-book (remove)="remove(b)" [book]="b"></app-book></td>
-    </tr>
+    <thead>
+      <tr>
+        <th>Titulo</th>
+        <th>Author</th>
+        <th>Lingua</th>
+        <th>Acções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let b of books">
+        <td>{{ b.title }}</td>
+        <td>{{ b.author }}</td>
+        <td>{{ b.language }}</td>
+        <td><app-book (remove)="remove(b)" [book]="b"></app-book></td>
+      </tr>
+    </tbody>
   </table>
 
   <p class="observacao">
     Procurou-se neste sitio obedecer as normas da escripta portugueza anteriores
     á mal inspirada
     <a href="https://pt.wikipedia.org/wiki/Reforma_Ortogr%C3%A1fica_de_1911">
-    Reforma Orthographica de 1911</a>
+      Reforma Orthographica de 1911
+    </a>
   </p>
   <script src="scripts/main.js"></script>
 </div>
