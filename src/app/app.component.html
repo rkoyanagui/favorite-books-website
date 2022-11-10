@@ -1,7 +1,7 @@
 <div class="main">
   <h1>Minha lista de livros favoritos</h1>
 
-  <label for="addBookInput">Qual outro livro quer adicionar?</label>
+  <label for="addTitleInput">Qual outro livro quer adicionar?</label>
 
   <input
     #newTitle
@@ -29,7 +29,7 @@
     id="addAuthorInput"
   />
 
-  <input
+  <select
     #newLanguage
     placeholder="Lingua"
     (keyup.enter)="
@@ -38,9 +38,11 @@
       newAuthor.value = '';
       newLanguage.value = ''
     "
-    class="lg-text-input"
-    id="addLanguageInput"
-  />
+    class="lg-select"
+    id="addLanguageSelect"
+  >
+    <option *ngFor="let language of languages">{{ language }}</option>
+  </select>
 
   <button
     class="btn-primary"
@@ -55,39 +57,10 @@
   </button>
 
   <!-- Filter -->
-  <div class="btn-wrapper">
-    <button
-      class="btn btn-menu"
-      [class.active]="languageFilter == 'all'"
-      (click)="languageFilter = 'all'"
-    >
-      Todos
-    </button>
-
-    <button
-      class="btn btn-menu"
-      [class.active]="languageFilter == 'en'"
-      (click)="languageFilter = 'en'"
-    >
-      Inglez
-    </button>
-
-    <button
-      class="btn btn-menu"
-      [class.active]="languageFilter == 'fr'"
-      (click)="languageFilter = 'fr'"
-    >
-      Francez
-    </button>
-
-    <button
-      class="btn btn-menu"
-      [class.active]="languageFilter == 'pt'"
-      (click)="languageFilter = 'pt'"
-    >
-      Portuguez
-    </button>
-  </div>
+  <label for="languageFilterSelect">Filtrar por lingua: </label>
+  <select id="languageFilterSelect" [(ngModel)]="languageFilter">
+    <option *ngFor="let language of languageFilters">{{ language }}</option>
+  </select>
 
   <h2>
     {{ books.length }}

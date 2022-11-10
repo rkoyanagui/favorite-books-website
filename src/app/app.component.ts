@@ -9,7 +9,11 @@ import { Book } from './book';
 export class AppComponent {
   title = 'favorite-books-website';
 
-  languageFilter: 'all' | 'en' | 'pt' | 'fr' = 'all';
+  allLanguages = ['en', 'fr', 'pt'];
+  allLanguageFilters = ['todas', 'en', 'fr', 'pt'];
+  selectedLanguageFilter = 'todas';
+
+  languageFilter: 'todas' | 'en' | 'pt' | 'fr' = 'todas';
 
   allBooks = [
     {
@@ -34,8 +38,16 @@ export class AppComponent {
     },
   ];
 
+  get languages() {
+    return this.allLanguages;
+  }
+
+  get languageFilters() {
+    return this.allLanguageFilters;
+  }
+
   get books() {
-    if (this.languageFilter === 'all') {
+    if (this.languageFilter === 'todas') {
       return this.allBooks;
     }
     return this.allBooks.filter(
