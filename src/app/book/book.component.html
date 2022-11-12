@@ -1,7 +1,7 @@
 <div class="book">
   <div class="btn-group" *ngIf="!editable">
     <button class="btn" (click)="editable = !editable">
-      <img src="assets/lapis.png" alt="Editar" />
+      <img src="assets/pencil.png" alt="Editar" />
     </button>
     <button class="btn btn-warn" (click)="remove.emit()">
       <img src="assets/eraser.png" alt="Excluir" />
@@ -41,14 +41,16 @@
     />
 
     <div class="btn-group">
-      <button class="btn btn-cancel" (click)="editable = !editable">Cancelar</button>
+      <button class="btn btn-cancel" (click)="editable = !editable">
+        <img src="assets/red-x.png" alt="Cancelar" />
+      </button>
       <button
         class="btn btn-save"
         (click)="
           saveBook(editedTitle.value, editedAuthor.value, editedLanguage.value)
         "
       >
-        Salvar
+        <img src="assets/floppy.png" alt="Salvar" />
       </button>
     </div>
   </div>
