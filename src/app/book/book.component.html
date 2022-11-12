@@ -1,7 +1,11 @@
 <div class="book">
   <div class="btn-group" *ngIf="!editable">
-    <button class="btn" (click)="editable = !editable">Editar</button>
-    <button class="btn btn-warn" (click)="remove.emit()">Excluir</button>
+    <button class="btn" (click)="editable = !editable">
+      <img src="assets/lapis.png" alt="Editar" />
+    </button>
+    <button class="btn btn-warn" (click)="remove.emit()">
+      <img src="assets/eraser.png" alt="Excluir" />
+    </button>
   </div>
 
   <!-- This section shows only if user clicks Edit button -->
@@ -37,7 +41,7 @@
     />
 
     <div class="btn-group">
-      <button class="btn" (click)="editable = !editable">Cancelar</button>
+      <button class="btn btn-cancel" (click)="editable = !editable">Cancelar</button>
       <button
         class="btn btn-save"
         (click)="

@@ -10,14 +10,19 @@
 }
 
 .btn-group button {
-  width: 100%;
+  margin: auto;
   display: block;
 }
 
 .btn-save {
+  width: 100%;
   background-color: #000;
   color: #fff;
   border-color: #000;
+}
+
+.btn-cancel {
+  width: 100%;
 }
 
 .btn-save:hover {
@@ -31,21 +36,6 @@
 
 .checkbox-wrapper {
   margin: 0.5rem 0;
-}
-
-.btn-warn {
-  background-color: #b90000;
-  color: #fff;
-  border-color: #9a0000;
-}
-
-.btn-warn:hover {
-  background-color: #9a0000;
-}
-
-.btn-warn:active {
-  background-color: #e30000;
-  border-color: #000;
 }
 
 .sm-text-input {
